@@ -81,7 +81,7 @@
                     <TextView
                         android:layout_weight="1.08"
                         android:id="@+id/tvusername"
-                        android:hint="Username :"
+                        android:hint="Username Pengguna :"
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="25dp"
                         android:textSize="15dp"
