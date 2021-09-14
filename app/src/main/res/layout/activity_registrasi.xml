@@ -62,7 +62,7 @@
                     <TextView
                         android:layout_weight="1.08"
                         android:id="@+id/tvemail"
-                        android:hint="Email Pengguna :"
+                        android:hint="Email :"
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="25dp"
                         android:textSize="15dp"
@@ -81,7 +81,7 @@
                     <TextView
                         android:layout_weight="1.08"
                         android:id="@+id/tvusername"
-                        android:hint="Username Pengguna :"
+                        android:hint="Username :"
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="25dp"
                         android:textSize="15dp"
@@ -100,7 +100,7 @@
                     <TextView
                         android:layout_weight="1.08"
                         android:id="@+id/tvpassword"
-                        android:hint="Password pengguna:"
+                        android:hint="Password :"
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="25dp"
                         android:textSize="15dp"
