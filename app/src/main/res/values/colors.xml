@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="biru">#1cc5dc</color>
     <color name="colorPrim">#e8150e</color>
+    <color name="warna_statusbar">#4B8EF1</color>
 </resources>
