@@ -70,6 +70,7 @@
                 android:layout_height="match_parent"/>
 
             <EditText
+                android:id="@+id/txtemail"
                 android:layout_weight="1"
                 android:textColor="@color/black"
                 android:paddingLeft="25dp"
@@ -89,6 +90,7 @@
                 android:layout_height="match_parent"/>
 
             <EditText
+                android:id="@+id/txtpassword"
                 android:layout_weight="1"
                 android:paddingLeft="25dp"
                 android:textSize="30dp"
