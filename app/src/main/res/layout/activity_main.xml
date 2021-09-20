@@ -98,6 +98,7 @@
                 android:layout_height="match_parent"/>
 
             <Button
+                android:id="@+id/btnlogin"
                 android:text="LOGIN"
                 android:layout_weight="0.9"
                 android:fontFamily="sans-serif-medium"
