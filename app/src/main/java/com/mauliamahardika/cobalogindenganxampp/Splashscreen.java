@@ -13,12 +13,13 @@ public class Splashscreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
 
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
                 //setelah loading maka akan langsung berpindah ke home activity
-                Intent home=new Intent(Splashscreen.this, MainActivity.class);
+                Intent home=new Intent(Splashscreen.this, IndexMenu.class);
                 startActivity(home);
                 finish();
             }
