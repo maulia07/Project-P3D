@@ -12,8 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/gaadabar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".IndexMenu"></activity>
-        <activity android:name=".registrasi" />
+        <activity android:name=".masatanam.IsiMasaTanam" android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".kontenmonitoring.MasaTanam" />
+        <activity android:name=".IndexMenu" />
+        <activity android:name=".registrasi" android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="stateHidden" />

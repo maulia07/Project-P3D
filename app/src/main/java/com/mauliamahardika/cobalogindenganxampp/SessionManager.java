@@ -3,6 +3,7 @@ package com.mauliamahardika.cobalogindenganxampp;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -43,6 +44,7 @@ public class SessionManager {
 
         if (!this.isLoggin()){
             Intent i = new Intent(context, MainActivity.class);
+
             context.startActivity(i);
             ((IndexMenu) context).finish();
         }
