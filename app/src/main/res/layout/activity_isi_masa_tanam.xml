@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".masatanam.IsiMasaTanam">
+
+    <LinearLayout
+        android:id="@+id/lyt1"
+        android:background="@color/warna_statusbar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:id="@+id/backarrowdua"
+            android:scaleType="fitCenter"
+            android:layout_margin="3dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7"/>
+
+        <TextView
+            android:textColor="@color/white"
+            android:text="Input Masa Tanam"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+
+            android:scaleType="fitCenter"
+            android:layout_margin="5dp"
+            android:src="@drawable/logoheadkiri"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_above="@id/lytbuton"
+        android:layout_below="@id/lyt1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@id/lyt1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:text="Prediksi Masa Tanam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:background="@drawable/gradientspiner"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtnamapenanam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="casual"
+                        android:drawablePadding="12dp"
+                        android:hint="Nama Penanam"
+                        android:importantForAutofill="no"
+                        android:layout_marginBottom="10dp"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:text="Jenis Tanaman *"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/gradientspiner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/txtjnstaneman"
+                    android:layout_width="match_parent"
+                    android:spinnerMode="dialog"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/PilihanTanaman"
+                    android:layout_height="50dp"/></LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="true"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtjumlahtanam"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="casual"
+                            android:drawablePadding="12dp"
+                            android:hint="Jumlah Tanam"
+                            android:importantForAutofill="no"
+                            android:layout_marginBottom="10dp"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:text="Tanggal Semai *"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:background="@drawable/gradientspiner"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+
+                        <EditText
+                            android:layout_marginLeft="11dp"
+                            android:id="@+id/txttanggalpilihan"
+                            android:enabled="false"
+                            android:hint="Pilihan Tanggal"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:id="@+id/pilihdarikalender"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_weight="5"
+                        android:src="@drawable/ic_baseline_calendar_today_24"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="24sp"
+                        android:text="Prediksi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="true"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtprediksiparalon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                            android:fontFamily="casual"
+                            android:enabled="false"
+                            android:drawablePadding="12dp"
+                            android:hint="Pindah Ke Paralon"
+                            android:importantForAutofill="no"
+                            android:layout_marginBottom="10dp"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="true"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtpanen"
+                            android:enabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="casual"
+                            android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                            android:drawablePadding="12dp"
+                            android:hint="Prediksi Waktu Panen"
+                            android:importantForAutofill="no"
+                            android:layout_marginBottom="10dp"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="true"
+                        android:layout_marginBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtestimasipenjualan"
+                            android:drawableStart="@drawable/ic_baseline_attach_money_24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="casual"
+                            android:enabled="false"
+                            android:drawablePadding="12dp"
+                            android:hint="Estimasi Penjualan"
+                            android:importantForAutofill="no"
+                            android:layout_marginBottom="10dp"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+<RelativeLayout
+    android:id="@+id/lytbuton"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnsubmitall"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Submit"
+        android:backgroundTint="@color/warna_statusbar"
+        android:textColor="#ffffff" />
+</RelativeLayout>
+</RelativeLayout>
