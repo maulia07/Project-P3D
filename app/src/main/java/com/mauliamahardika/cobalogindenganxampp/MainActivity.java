@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (!mName.isEmpty() || !mPass.isEmpty()) {
                     Login(mName, mPass);
+
                 } else {
                     name.setError("Tolong Masukan Nama");
                     password.setError("Tolong Masukan Password");
@@ -108,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
                                     sessionManager.createSession(name,id);
 
                                     Intent intent = new Intent(MainActivity.this, IndexMenu.class);
+                                    Toast.makeText(MainActivity.this,"Selamat Datang "+name,Toast.LENGTH_LONG).show();
+
                                     intent.putExtra("name", name);
                                     //intent.putExtra("email", email);
                                     startActivity(intent);

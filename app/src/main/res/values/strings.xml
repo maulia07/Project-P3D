@@ -13,4 +13,10 @@
     </style>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="milihtanem">Pilih</string>
+    <string-array name="PilihanTanaman">
+        <item>--Pilih--</item>
+        <item>Kangkung</item>
+        <item>Pakcoy</item>
+    </string-array>
 </resources>

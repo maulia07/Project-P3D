@@ -45,5 +45,8 @@ dependencies {
     //koneksi
     implementation 'com.android.volley:volley:1.1.0'
 
+    //spiner
+    implementation'com.github.devdhar04:MaterialSpinner:v0.1.2'
+
 
 }
