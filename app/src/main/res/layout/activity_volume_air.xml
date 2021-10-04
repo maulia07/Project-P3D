@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kontenmonitoring.VolumeAir">
+
+    <LinearLayout
+        android:id="@+id/lyt1"
+        android:background="@color/warna_statusbar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:id="@+id/backarrow"
+            android:scaleType="fitCenter"
+            android:layout_margin="3dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7"/>
+
+        <TextView
+            android:textColor="@color/white"
+            android:text="Volume Air"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+
+            android:scaleType="fitCenter"
+            android:layout_margin="5dp"
+            android:src="@drawable/logoheadkiri"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"/>
+    </LinearLayout>
+
+</RelativeLayout>

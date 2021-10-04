@@ -109,6 +109,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
+                            android:id="@+id/txtsuhuudara"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="5dp"
@@ -116,11 +117,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="match_parent"
+                                android:layout_width="60dp"
+                                android:layout_gravity="center"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/ic_baseline_phone_iphone_24" />
+                                android:src="@drawable/suhu_udara" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -132,6 +134,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/txtkelembapan"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="5dp"
@@ -139,11 +142,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="match_parent"
+                                android:layout_width="60dp"
+                                android:layout_gravity="center"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/ic_baseline_phone_iphone_24" />
+                                android:src="@drawable/kelembapan" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -155,6 +159,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/txtnutrisi"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="5dp"
@@ -162,11 +167,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="match_parent"
+                                android:layout_width="60dp"
                                 android:layout_height="match_parent"
+                                android:layout_gravity="center"
                                 android:layout_weight="1"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/ic_baseline_phone_iphone_24" />
+                                android:src="@drawable/nutrisi" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -178,6 +184,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/txtsuhuair"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="5dp"
@@ -185,11 +192,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="match_parent"
+                                android:layout_width="60dp"
+                                android:layout_gravity="center"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/ic_baseline_phone_iphone_24" />
+                                android:src="@drawable/suhu_air" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -210,6 +218,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
+                            android:id="@+id/txtvolumeair"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="5dp"
@@ -217,11 +226,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="match_parent"
+                                android:layout_width="60dp"
                                 android:layout_height="match_parent"
+                                android:layout_gravity="center"
                                 android:layout_weight="1"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/ic_baseline_phone_iphone_24" />
+                                android:src="@drawable/volume_air" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -241,11 +251,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="match_parent"
+                                android:layout_width="60dp"
                                 android:layout_height="match_parent"
+                                android:layout_gravity="center"
                                 android:layout_weight="1"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/ic_baseline_phone_iphone_24" />
+                                android:src="@drawable/masa_tanam" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -257,6 +268,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/txttentang"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="5dp"
@@ -264,11 +276,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="match_parent"
+                                android:layout_width="75dp"
                                 android:layout_height="match_parent"
+                                android:layout_gravity="center"
                                 android:layout_weight="1"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/ic_baseline_phone_iphone_24" />
+                                android:src="@drawable/tentang" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -288,11 +301,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="match_parent"
+                                android:layout_width="60dp"
                                 android:layout_height="match_parent"
+                                android:layout_gravity="center"
                                 android:layout_weight="1"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/ic_baseline_phone_iphone_24" />
+                                android:src="@drawable/keluar" />
 
                             <TextView
 

@@ -28,7 +28,13 @@ import com.mauliamahardika.cobalogindenganxampp.kombanslide.BannerSlider;
 import com.mauliamahardika.cobalogindenganxampp.kombanslide.FragmentSlider;
 import com.mauliamahardika.cobalogindenganxampp.kombanslide.SliderIndicator;
 import com.mauliamahardika.cobalogindenganxampp.kombanslide.SliderPagerAdapter;
+import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.Kelembapan;
 import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.MasaTanam;
+import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.Nutrisi;
+import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.SuhuAir;
+import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.SuhuUdara;
+import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.Tentang;
+import com.mauliamahardika.cobalogindenganxampp.kontenmonitoring.VolumeAir;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -47,11 +53,12 @@ public class IndexMenu extends AppCompatActivity {
     private LinearLayout mLinearLayout;
     TextView m;
     private static final String TAG = IndexMenu.class.getSimpleName(); //getting the info
-    private LinearLayout btn_logout,masatanam;
+    private LinearLayout btn_logout, masatanam, suhuudara, kelembapan, nutrisi, suhuair, volumeair, tentang;
     SessionManager sessionManager;
     String getId;
     // private static String URL_UPLOAD = "http://192.168.0.3/android_register_login/upload.php";
     private static String URL_READ = "http://192.168.0.3/hidroponik/read_detail.php";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,9 +71,15 @@ public class IndexMenu extends AppCompatActivity {
         HashMap<String, String> user = sessionManager.getUserDetail();
         getId = user.get(sessionManager.ID);
         //inisialisasi perangkat
-        m=findViewById(R.id.txtnamapenggunaa);
-        btn_logout=findViewById(R.id.btnkeluar);
-        masatanam=findViewById(R.id.txtmasatanam);
+        m = findViewById(R.id.txtnamapenggunaa);
+        btn_logout = findViewById(R.id.btnkeluar);
+        masatanam = findViewById(R.id.txtmasatanam);
+        suhuudara = findViewById(R.id.txtsuhuudara);
+        kelembapan = findViewById(R.id.txtkelembapan);
+        nutrisi = findViewById(R.id.txtnutrisi);
+        suhuair = findViewById(R.id.txtsuhuair);
+        volumeair = findViewById(R.id.txtvolumeair);
+        tentang = findViewById(R.id.txttentang);
 
 
         //peralihan ke activity masa tanam
@@ -100,7 +113,6 @@ public class IndexMenu extends AppCompatActivity {
     }
 
 
-
     private void setupSlider() {
         bannerSlider.setDurationScroll(800);
         List<Fragment> fragments = new ArrayList<>();
@@ -118,7 +130,7 @@ public class IndexMenu extends AppCompatActivity {
         mIndicator.show();
     }
 
-    private void getUserDetail(){
+    private void getUserDetail() {
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
@@ -136,9 +148,9 @@ public class IndexMenu extends AppCompatActivity {
                             String success = jsonObject.getString("success");
                             JSONArray jsonArray = jsonObject.getJSONArray("read");
 
-                            if (success.equals("1")){
+                            if (success.equals("1")) {
 
-                                for (int i =0; i < jsonArray.length(); i++){
+                                for (int i = 0; i < jsonArray.length(); i++) {
 
                                     JSONObject object = jsonArray.getJSONObject(i);
 
@@ -149,23 +161,86 @@ public class IndexMenu extends AppCompatActivity {
                                     masatanam.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            Intent i= new Intent(IndexMenu.this, MasaTanam.class);
+                                            Intent i = new Intent(IndexMenu.this, MasaTanam.class);
+                                            i.putExtra("idnya", getId);
+                                            startActivity(i);
+                                            finish();
+                                            //
+                                        }
+                                    });
+
+                                    suhuudara.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            Intent i = new Intent(IndexMenu.this, SuhuUdara.class);
+                                            i.putExtra("idnya", getId);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                    });
+
+                                    kelembapan.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            Intent i= new Intent(IndexMenu.this, Kelembapan.class);
                                             i.putExtra("idnya",getId);
                                             startActivity(i);
                                             finish();
-                                          //
                                         }
                                     });
+
+                                    nutrisi.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            Intent i= new Intent(IndexMenu.this, Nutrisi.class);
+                                            i.putExtra("idnya",getId);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                    });
+
+                                    suhuair.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            Intent i= new Intent(IndexMenu.this, SuhuAir.class);
+                                            i.putExtra("idnya",getId);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                    });
+
+                                    volumeair.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            Intent i= new Intent(IndexMenu.this, VolumeAir.class);
+                                            i.putExtra("idnya",getId);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                    });
+
+                                    tentang.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            Intent i= new Intent(IndexMenu.this, Tentang.class);
+                                            i.putExtra("idnya",getId);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                    });
+
+
                                     //email.setText(strEmail);
 
                                 }
-
                             }
 
-                        } catch (JSONException e) {
+                }
+
+                        catch (JSONException e) {
                             e.printStackTrace();
                             progressDialog.dismiss();
-                            Toast.makeText(IndexMenu.this, "Error Reading Detail "+e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(IndexMenu.this, "Error Reading Detail " + e.toString(), Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -174,13 +249,12 @@ public class IndexMenu extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         progressDialog.dismiss();
-                        Toast.makeText(IndexMenu.this, "Error Reading Detail "+error.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(IndexMenu.this, "Error Reading Detail " + error.toString(), Toast.LENGTH_SHORT).show();
                     }
-                })
-        {
+                }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String > params = new HashMap<>();
+                Map<String, String> params = new HashMap<>();
                 params.put("id", getId);
                 return params;
             }
@@ -190,6 +264,7 @@ public class IndexMenu extends AppCompatActivity {
         requestQueue.add(stringRequest);
 
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -202,4 +277,5 @@ public class IndexMenu extends AppCompatActivity {
 
         finish();
     }
+
 }

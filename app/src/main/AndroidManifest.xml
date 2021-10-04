@@ -12,10 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/gaadabar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".masatanam.IsiMasaTanam" android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".kontenmonitoring.Tentang"></activity>
+        <activity android:name=".kontenmonitoring.VolumeAir" />
+        <activity android:name=".kontenmonitoring.SuhuAir" />
+        <activity android:name=".kontenmonitoring.Nutrisi" />
+        <activity android:name=".kontenmonitoring.Kelembapan" />
+        <activity android:name=".kontenmonitoring.SuhuUdara"/>
+        <activity
+            android:name=".masatanam.IsiMasaTanam"
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".kontenmonitoring.MasaTanam" />
         <activity android:name=".IndexMenu" />
-        <activity android:name=".registrasi" android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".registrasi"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="stateHidden" />
