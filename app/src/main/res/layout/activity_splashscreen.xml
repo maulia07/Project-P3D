@@ -4,57 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
     tools:context=".Splashscreen">
 
-    <ImageView
-        android:id="@+id/img1"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logo_atas"
-        android:layout_width="150dp"
-        android:layout_height="150dp"/>
+   <ImageView
+       android:id="@+id/logo"
+       android:layout_centerInParent="true"
+       android:src="@drawable/p3dlogo"
+       android:layout_width="100dp"
+       android:layout_height="100dp"/>
 
-    <ImageView
-        android:id="@+id/imglogop3d"
-        android:src="@drawable/ic_baseline_account_circle_24"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/img1"
-        android:layout_marginTop="90dp"
-        android:layout_width="200dp"
-        android:layout_height="200dp"/>
-
-    <TextView
-        android:textStyle="bold"
-        android:layout_marginTop="400dp"
-        android:layout_below="@id/img1"
-        android:id="@+id/tv1"
-        android:layout_centerHorizontal="true"
-        android:text="Develope by : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:textStyle="bold"
-        android:id="@+id/tv2"
-        android:layout_below="@id/tv1"
-        android:layout_centerHorizontal="true"
-        android:text="Teknik Informatika "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:textStyle="bold"
-        android:id="@+id/tv3"
-        android:layout_below="@id/tv2"
-        android:layout_centerHorizontal="true"
-        android:text="Universitas Islam Syekh Yusuf "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:textStyle="bold"
-        android:id="@+id/tv4"
-        android:layout_below="@id/tv3"
-        android:layout_centerHorizontal="true"
-        android:text="Tangerang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_below="@id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/dibuat"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Di Buat Oleh :"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:text="Mahasiswa Fakulta Teknik UNIS "
+            android:layout_centerInParent="true"
+            android:layout_below="@id/dibuat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
 
 </RelativeLayout>

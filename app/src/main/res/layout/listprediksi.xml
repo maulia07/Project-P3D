@@ -30,6 +30,7 @@
                 android:layout_height="wrap_content"/>
 
             <ImageView
+                android:id="@+id/hapus"
                 android:scaleType="fitCenter"
                 android:layout_weight="8"
                 android:src="@drawable/ic_baseline_delete_24"
@@ -131,6 +132,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <ImageView
+                        android:id="@+id/imgsemai"
                         android:layout_weight="5"
                         android:src="@drawable/ic_baseline_check_circle_24_abuabu"
                         android:layout_width="match_parent"
@@ -164,6 +166,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <ImageView
+                        android:id="@+id/checkPral"
                         android:layout_weight="5"
                         android:src="@drawable/ic_baseline_check_circle_24_abuabu"
                         android:layout_width="match_parent"
@@ -197,6 +200,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <ImageView
+                        android:id="@+id/imgpanen"
                         android:layout_weight="5"
                         android:src="@drawable/ic_baseline_check_circle_24_abuabu"
                         android:layout_width="match_parent"

@@ -35,7 +35,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,12 +59,14 @@ public class MasaTanam extends AppCompatActivity {
 
     FloatingActionButton addnya;
     ImageView back;
+    ImageView pral;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_masa_tanam);
         //
+        pral=findViewById(R.id.checkPral);
 
 
 
@@ -109,6 +115,7 @@ public class MasaTanam extends AppCompatActivity {
         LoadMasaTanam();
 
 
+
     //Toast.makeText(this,"LADA"+j,Toast.LENGTH_LONG).show();
     }
 
@@ -140,6 +147,22 @@ public class MasaTanam extends AppCompatActivity {
                                             produk.getString("prediksiparalon"),
                                             produk.getString("prediksipanen"),
                                             produk.getString("estimasipenjualan")));
+
+
+                                    /*String strPrediksi = produk.getString("prediksiparalon").trim();
+                                    Date outputString =new SimpleDateFormat("dd-MM-yyyy").parse(strPrediksi);
+
+                                    Date currentTime = Calendar.getInstance().getTime();
+                                    SimpleDateFormat time1 = new SimpleDateFormat("yyyy-MM-dd");
+                                    String output = time1.format(currentTime.getTime());
+
+                                    if (outputString.before(currentTime)){
+                                        pral.setImageResource(R.drawable.ic_baseline_check_circle_24_ijo);
+                                        Toast.makeText(MasaTanam.this,"Berhasil",Toast.LENGTH_LONG).show();
+
+                                    }else {
+                                        Toast.makeText(MasaTanam.this,"Gagal",Toast.LENGTH_LONG).show();
+                                    }*/
 
                             }
 
