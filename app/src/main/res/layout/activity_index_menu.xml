@@ -71,9 +71,9 @@
 
         </LinearLayout>
 
-        <FrameLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:scrollbars="none">
 
             <LinearLayout
@@ -117,6 +117,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:layout_margin="5dp"
                                 android:layout_width="60dp"
                                 android:layout_gravity="center"
                                 android:layout_height="match_parent"
@@ -142,6 +143,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:layout_margin="5dp"
                                 android:layout_width="60dp"
                                 android:layout_gravity="center"
                                 android:layout_height="match_parent"
@@ -167,6 +169,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:layout_margin="5dp"
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
@@ -192,6 +195,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:layout_margin="5dp"
                                 android:layout_width="60dp"
                                 android:layout_gravity="center"
                                 android:layout_height="match_parent"
@@ -226,6 +230,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:layout_margin="5dp"
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
@@ -251,12 +256,13 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:layout_margin="5dp"
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:layout_weight="1"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/masa_tanam" />
+                                android:src="@drawable/masatanam" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -276,6 +282,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:layout_margin="5dp"
                                 android:layout_width="75dp"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
@@ -301,6 +308,7 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:layout_margin="5dp"
                                 android:layout_width="60dp"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
@@ -318,10 +326,16 @@
                                 android:textAlignment="center" />
                         </LinearLayout>
                     </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
-        </FrameLayout>
+        </ScrollView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+        </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
 

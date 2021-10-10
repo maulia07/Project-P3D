@@ -5,9 +5,12 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
-
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
     defaultConfig {
-        applicationId "com.mauliamahardika.cobalogindenganxampp"
+        applicationId 'com.ptigad.ftunis'
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -47,6 +50,11 @@ dependencies {
 
     //spiner
     implementation'com.github.devdhar04:MaterialSpinner:v0.1.2'
+
+    //circular progress
+        implementation 'com.github.brkckr:CircularProgressBar:1.0.1'
+
+
 
 
 }

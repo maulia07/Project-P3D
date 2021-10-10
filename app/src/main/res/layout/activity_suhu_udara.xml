@@ -41,4 +41,163 @@
             android:layout_weight="6"/>
     </LinearLayout>
 
+    <ScrollView
+        android:background="#D3D3D3"
+        android:layout_below="@id/lyt1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="#D3D3D3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/lyt2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <RelativeLayout
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/bacasuhuudara"
+                        android:textColor="@color/warna_statusbar"
+                        android:textSize="30sp"
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_below="@id/bacasuhuudara"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:text="Celcius"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <com.brkckr.circularprogressbar.CircularProgressBar
+                    android:layout_margin="10dp"
+                    android:id="@+id/txtcirclesuhuudara"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    app:cpbProgressColor="@color/warna_statusbar"
+
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lytatas"
+                android:orientation="vertical"
+                android:layout_below="@id/lyt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/colorPrim"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Status"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/txtstatus"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/warna_statusbar"
+                        android:gravity="center"
+                        android:text="Loading"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Tanggal Terakhir Update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/txttanggalupdate"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/warna_statusbar"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Isinya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Jam Terakhir Update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/txtjamupdate"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/warna_statusbar"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Isinya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_margin="90dp"
+                android:layout_below="@id/lytatas"
+                android:src="@drawable/logoheadkiri"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
 </RelativeLayout>

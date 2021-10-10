@@ -40,5 +40,186 @@
             android:layout_height="match_parent"
             android:layout_weight="6"/>
     </LinearLayout>
+    <ScrollView
+        android:background="#D3D3D3"
+        android:layout_below="@id/lyt1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="#D3D3D3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+            <RelativeLayout
+                android:id="@+id/lyt2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <RelativeLayout
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/bacanutrisi"
+                        android:textColor="@color/warna_statusbar"
+                        android:textSize="30sp"
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_below="@id/bacanutrisi"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:text="PPM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <com.brkckr.circularprogressbar.CircularProgressBar
+                    android:layout_margin="10dp"
+                    android:id="@+id/txtcirclenutrisi"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    app:cpbProgressColor="@color/warna_statusbar"
+
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lytatas"
+                android:orientation="vertical"
+                android:layout_below="@id/lyt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/colorPrim"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Status"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/txtstatus"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/warna_statusbar"
+                        android:gravity="center"
+                        android:text="Loading"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Tanggal Terakhir Update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/txttanggalupdate"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/warna_statusbar"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Isinya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Jam Terakhir Update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/txtjamupdate"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/warna_statusbar"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Isinya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/lytatas"
+                android:id="@+id/outpunmesin"
+                android:layout_marginTop="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_wb_sunny_24_matimesin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <ImageView
+                android:id="@+id/inputnutrisi"
+                android:layout_marginTop="70dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:layout_below="@id/lytatas"
+                android:src="@drawable/ic_baseline_keyboard_voice_24"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+            <TextView
+                android:textSize="20sp"
+                android:id="@+id/txt1"
+                android:text="Tekan Mic"
+                android:layout_marginTop="10dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/inputnutrisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+
+                android:text="Bicara Tambahkan Nutrisi Untuk Menambahkan Nutiris"
+                android:layout_marginTop="10dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

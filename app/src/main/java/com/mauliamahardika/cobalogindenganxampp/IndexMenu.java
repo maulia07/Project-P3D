@@ -4,12 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -64,6 +70,7 @@ public class IndexMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index_menu);
 
+        checkInternetConnection();
 
         //inisialisasi
         sessionManager = new SessionManager(this);
@@ -240,7 +247,7 @@ public class IndexMenu extends AppCompatActivity {
                         catch (JSONException e) {
                             e.printStackTrace();
                             progressDialog.dismiss();
-                            Toast.makeText(IndexMenu.this, "Error Reading Detail " + e.toString(), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(IndexMenu.this, "Error 1 " + e.toString(), Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -248,8 +255,11 @@ public class IndexMenu extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+
                         progressDialog.dismiss();
-                        Toast.makeText(IndexMenu.this, "Error Reading Detail " + error.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(IndexMenu.this, "Eror " + error.toString(), Toast.LENGTH_SHORT).show();
+
+
                     }
                 }) {
             @Override
@@ -274,8 +284,31 @@ public class IndexMenu extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         //moveTaskToBack(true);
-
         finish();
     }
+    //cek koneksi
+    private boolean checkInternetConnection() {
+        ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (conMgr.getActiveNetworkInfo() != null
+                && conMgr.getActiveNetworkInfo().isAvailable()
+                && conMgr.getActiveNetworkInfo().isConnected()) {
+            return true;
+        } else {
+            AlertDialog.Builder builder=new AlertDialog.Builder(IndexMenu.this);
+            builder.setTitle("Tidak Ada Koneksi");
+            builder.setMessage("Coba Periksa Status Koneksi Internet Anda !");
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+            AlertDialog dialog=builder.create();
+            dialog.show();
+           // builder.setOnCancelListener(true);
+           dialog.setCanceledOnTouchOutside(false);
 
+            return false;
+        }
+    }
 }

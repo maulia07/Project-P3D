@@ -2,7 +2,12 @@ package com.mauliamahardika.cobalogindenganxampp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -82,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
 
     //koneksi login
     private void Login(final String name, final String password) {
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Loading...");
 
        // loading.setVisibility(View.VISIBLE);
         //
@@ -99,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                             if (success.equals("1")) {
 
                                 for (int i = 0; i < jsonArray.length(); i++) {
-
+                                    progressDialog.show();
                                     JSONObject object = jsonArray.getJSONObject(i);
 
                                    String name = object.getString("name").trim();
@@ -115,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                                     //intent.putExtra("email", email);
                                     startActivity(intent);
                                     finish();
-                                    Toast.makeText(MainActivity.this,"Login Berhasil",Toast.LENGTH_LONG).show();
+                                    //Toast.makeText(MainActivity.this,"Login Berhasil",Toast.LENGTH_LONG).show();
 
                                     //loading.setVisibility(View.GONE);
 
@@ -139,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                        // loading.setVisibility(View.GONE);
                         //btn_login.setVisibility(View.VISIBLE);
+                        checkInternetConnection();
                         Toast.makeText(MainActivity.this, "Error " +error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 })
@@ -156,6 +164,29 @@ public class MainActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
 
     }
+    private boolean checkInternetConnection() {
+        ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (conMgr.getActiveNetworkInfo() != null
+                && conMgr.getActiveNetworkInfo().isAvailable()
+                && conMgr.getActiveNetworkInfo().isConnected()) {
+            return true;
+        } else {
+            AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Tidak Ada Koneksi");
+            builder.setMessage("Coba Periksa Status Koneksi Internet Anda !");
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            AlertDialog dialog=builder.create();
+            dialog.show();
+            // builder.setOnCancelListener(true);
+            //dialog.setCanceledOnTouchOutside(false);
 
+            return false;
+        }
+    }
 
 }
