@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".kontenmonitoring.Tentang">
 
     <LinearLayout
@@ -32,7 +33,6 @@
             android:layout_height="match_parent"/>
 
         <ImageView
-
             android:scaleType="fitCenter"
             android:layout_margin="5dp"
             android:src="@drawable/logoheadkiri"
@@ -40,5 +40,418 @@
             android:layout_height="match_parent"
             android:layout_weight="6"/>
     </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/lyt1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lyt2"
+            android:orientation="vertical"
+            android:layout_below="@id/lyt1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_marginTop="20dp"
+               android:layout_marginLeft="20dp"
+               android:layout_marginRight="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+
+               // PENJELASAN ISI APLIKASI
+               <TextView
+                   android:id="@+id/tv1"
+                   android:background="@color/warna_statusbar"
+                   android:textColor="@color/white"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Penjelasan Tentang Aplikasi"
+                   android:layout_marginTop="20dp"
+                   android:textSize="20dp"
+                   android:textStyle="bold"
+                   android:textAlignment="center"/>
+
+
+               // TAMPILAN MENU UTAMA
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:text="Tampilan Menu Utama"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/gambar_menu_utama"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:layout_marginTop="@dimen/dp_15"
+                   android:text="Di dalam menu utama ini terdapat 8 fungsi yang dapat digunakan dalam aplikasi. Yaitu terdapat Suhu Udara, Kelembapan, Nutrisi, Suhu Air, Volume Air, Masa Tanam, Tentang, dan Keluar."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+                // TAMPILAN SUHU UDARA
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="Tampilan Suhu Udara"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/cek_suhu_udara"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:text="Pada tampilan ini, aplikasi akan mendeteksi suhu udara yang di deteksi oleh perangkat yang ada di rumah kasa."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+               // TAMPILAN KELEMBAPAN
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="Tampilan Kelembapan"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/cek_kelembapan"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:text="Pada tampilan ini, aplikasi akan mendeteksi kelembapan yang di deteksi oleh perangkat yang ada di rumah kasa."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+               // TAMPILAN NUTRISI
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="Tampilan Nutrisi"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/isi_nutrisi"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:text="Pada tampilan ini, aplikasi akan mendeteksi nutrisi yang di deteksi oleh perangkat yang ada di rumah kasa. Apabila di tampilan berstatus normal maka nutrisi sudah cukup, dan apabila berstatus tidak normal maka nutrisi kurang dan harus ditambahkan dengan cara ''Tekan Mic'' dan bicara ''Tambahkan Nutrisi''. Maka nutrisi akan menambah secara otomatis."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+               //TAMPILAN SUHU AIR
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="Tampilan Suhu Air"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/cek_suhu_air"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:text="Pada tampilan ini, aplikasi akan mendeteksi suhu air yang di deteksi oleh perangkat yang ada di rumah kasa."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+              // TAMPILAN VOLUME AIR
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="Tampilan Volume Air"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/cek_volume_air"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:text="Pada tampilan ini, aplikasi akan mendeteksi volume air yang di deteksi oleh perangkat yang ada di rumah kasa."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+               // TAMPILAN MASA TANAM
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="Tampilan Masa Tanam"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/masa_tanam"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:text="Pada tampilan ini kita dapat menambahkan data masa tanam dengan mengklik gambar yang ada di pojok bawah kanan dengan lambang + dan akan muncul halaman input masa tanam untuk mengisi data."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+              // TAMPILAN ISI MASA TANAM
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="Tampilan Isi Masa Tanam"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/isi_masa_tanam"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:text="Pada tampilan ini kita dapat mengisi data masa tanam agar mendapat notifikasi saat akan melakukan pindah ke peralon dan prediksi waktu panen. Maka akan memudahkan kita sebagai notifikasi pengingat."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+               // TAMPILAN FUNGSI ICON TENTANG
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="Fungsi Icon Tentang"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/icon_tentang"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:text="Fungsi dari icon ini adalah penjelasan tentang aplikasi dan alat dan bahan hidroponik yang dapat digunakan."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+               // TAMPILAN FUNGSI ICON KELUAR
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="Fungsi Icon Keluar"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/icon_keluar"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:text="Fungsi dari icon ini adalah apabila di klik maka akan keluar dari halaman menu utama, dan apabila ingin masuk maka login kembali."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+               // ALAT DAN BAHAN HIDROPONIK
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Alat dan Bahan Hidroponik"
+                   android:background="@color/warna_statusbar"
+                   android:textColor="@color/white"
+                   android:layout_marginTop="20dp"
+                   android:textSize="20dp"
+                   android:textStyle="bold"
+                   android:textAlignment="center" />
+
+
+               // NETPOT
+               <TextView
+                android:text="1. Netpot"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"/>
+
+               <ImageView
+                android:src="@drawable/netpot"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="200dp"/>
+
+               <TextView
+                   android:text="Netpot merupakan wadah atau pot tanaman yang berukuran kecil dan berlubang dibawahnya, netpot juga merupakan salah satu alat dalam bertanaman hidroponik, selain memakai netpot bisa juga digantikan dengan menggunakan gelas plastik atu botol bekas yang sudah dibentuk dan dilubangi."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+               // ROCKWOOL
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="2. Rockwool"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:src="@drawable/rockwool"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:text="Rockwool merupakan salah satu bahan yang digunakan dalam bertanam hidroponik, rockwool ini terbuat dari batuan besar yang dipanaskan dengan suhu yang sangat tinggi hingga berbentuk busa, rockwol dapat digunakan secara permanen karna daya serap airnya mudah disesuaikan."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+               // NUTRISI AB MIX
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="3. Nutrisi AB Mix"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:src="@drawable/nutrisi_ab_mix"
+                   android:layout_gravity="center"
+                   android:layout_width="300dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:text="Nutrisi merupakan bahan yang diperlukan dalam penanaman hidroponik, kerena nutrisi memiliki mineral zat -zat yang tinggi dalam pertumbuhan tanaman, maka dari itu kita bisa mengetahui pertumbuhan tanaman itu secara optimal atau tidak."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+               // STEROFOAM
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="4. Sterofoam"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <ImageView
+                   android:src="@drawable/sterofoam"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <TextView
+                   android:text="Busa sterofoam biasanya digunakan untuk meletakkan netpot atau wadah tanaman dan menahannya agar posisinya tetap stabil. Biasanya dalam metode hidroponik sterofoam akan dilubangi sesuai dengan ukuran netpot atau pot tanaman yang akan dimasukkan kedalamnya."
+                   android:justificationMode="inter_word"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+
+               // BENIH PAKCOY DAN KANGKUNG
+               <TextView
+                   android:layout_marginTop="15dp"
+                   android:text="5. Benih Pakcoy dan Kangkung"
+                   android:textStyle="bold"
+                   android:textSize="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <LinearLayout
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+               <ImageView
+                   android:id="@+id/pakcoy"
+                   android:src="@drawable/bibit_pakcoy"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+
+               <ImageView
+                   android:id="@+id/kangkung"
+                   android:src="@drawable/bibit_kangkung"
+                   android:layout_gravity="center"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"/>
+               </LinearLayout>
+               <TextView
+                   android:text="Benih merupakan bahan yang dibutuhkan untuk bertanam hidroponik, saat memilih benih sebaiknya diperhatikan dari sisi kualitas nya, guna bisa mendapatkan hasil tanaman yang ekonomis dan berkualitas."
+                   android:justificationMode="inter_word"
+                   android:layout_marginBottom="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
