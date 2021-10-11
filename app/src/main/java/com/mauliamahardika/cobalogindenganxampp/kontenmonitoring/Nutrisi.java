@@ -254,12 +254,15 @@ public class Nutrisi extends AppCompatActivity {
         //
 
 
-
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Tunggu Yaaa....");
+        progressDialog.setCanceledOnTouchOutside(false);
        if(text.contains("tambahkan nutrisi")){
             final MediaPlayer mp7 = MediaPlayer.create(this, R.raw.nutrisitambah);
             final MediaPlayer mp8 =  MediaPlayer.create(this, R.raw.prosestambahnutrisi);
             uploadsatu();
             mp7.start();
+            progressDialog.show();
             btnvoiceph.setEnabled(false);
             btnvoiceph.setImageResource(R.drawable.ic_baseline_keyboard_voice_mati_24);
 
@@ -273,6 +276,7 @@ public class Nutrisi extends AppCompatActivity {
                     mp8.start();
                     btnvoiceph.setEnabled(true);
                     btnvoiceph.setImageResource(R.drawable.ic_baseline_keyboard_voice_24);
+                    progressDialog.dismiss();
                 }
             }, 20000);
 
@@ -449,6 +453,7 @@ public class Nutrisi extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         //  moveTaskToBack(true);
+
 
         Intent i=new Intent(Nutrisi.this,IndexMenu.class);
         startActivity(i);
