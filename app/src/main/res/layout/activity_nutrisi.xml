@@ -185,9 +185,9 @@
             </LinearLayout>
             <ImageView
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/lytatas"
+                android:layout_below="@id/inputnutrisi"
                 android:id="@+id/outpunmesin"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_baseline_wb_sunny_24_matimesin"
                 android:layout_width="30dp"
@@ -195,10 +195,10 @@
 
             <ImageView
                 android:id="@+id/inputnutrisi"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="10dp"
                 android:layout_centerInParent="true"
                 android:scaleType="fitXY"
-                android:layout_below="@id/lytatas"
+                android:layout_below="@id/txt2"
                 android:src="@drawable/ic_baseline_keyboard_voice_24"
                 android:layout_width="80dp"
                 android:layout_height="80dp"/>
@@ -206,14 +206,14 @@
                 android:textSize="20sp"
                 android:id="@+id/txt1"
                 android:text="Tekan Mic"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
                 android:layout_centerInParent="true"
-                android:layout_below="@id/inputnutrisi"
+                android:layout_below="@id/lytatas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
-
-                android:text="Bicara Tambahkan Nutrisi Untuk Menambahkan Nutiris"
+                android:id="@+id/txt2"
+                android:text="Bicara ( Tambahkan Nutrisi ) Untuk Menambahkan Nutiris"
                 android:layout_marginTop="10dp"
                 android:layout_centerInParent="true"
                 android:layout_below="@id/txt1"
