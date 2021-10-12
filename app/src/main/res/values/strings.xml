@@ -19,4 +19,12 @@
         <item>Kangkung</item>
         <item>Pakcoy</item>
     </string-array>
+
+    <string-array name="PilihanKelompok">
+        <item>--Pilih--</item>
+        <item>Dasawisma</item>
+        <item>Masyarakat</item>
+        <item>Mitra Tani</item>
+        <item>Mitra Cai</item>
+    </string-array>
 </resources>

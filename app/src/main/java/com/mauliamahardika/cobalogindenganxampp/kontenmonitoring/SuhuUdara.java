@@ -44,7 +44,7 @@ import java.util.concurrent.Delayed;
 
 public class SuhuUdara extends AppCompatActivity {
     ImageView back;
-    private static final String URL_BACASUHUUDARA = "http://192.168.0.3/hidroponik/bacasuhuudara.php";
+    private static final String URL_BACASUHUUDARA = "http://192.168.191.183/hidroponik/bacasuhuudara.php";
     private static final String TAG = SuhuUdara.class.getSimpleName(); //getting the info
 
     //deklarasi komponen

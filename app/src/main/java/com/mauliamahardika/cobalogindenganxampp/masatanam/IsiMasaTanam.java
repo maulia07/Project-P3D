@@ -50,7 +50,7 @@ import java.util.Map;
 public class IsiMasaTanam extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private static String URL_PREDIKSI = "http://192.168.0.3/hidroponik/masatanam.php";
+    private static String URL_PREDIKSI = "http://192.168.191.183/hidroponik/masatanam.php";
 
     private ProgressBar loading;
     EditText hasiledittext;
@@ -60,7 +60,7 @@ public class IsiMasaTanam extends AppCompatActivity {
     //komponen input
     MaterialButton btninput;
     TextInputEditText vnama,vjumlahtanam;
-    Spinner jnstaneman;
+    Spinner jnstaneman, kelompok;
     EditText tgltanem;
     TextInputEditText prdkparalon,prdkpanen,prdkpenjualan;
 
@@ -83,6 +83,7 @@ public class IsiMasaTanam extends AppCompatActivity {
         //deklarasi komponen input dan prediksi
         //input
         vnama=findViewById(R.id.txtnamapenanam);
+        kelompok=findViewById(R.id.txtklmpk);
         vjumlahtanam=findViewById(R.id.txtjumlahtanam);
         jnstaneman=findViewById(R.id.txtjnstaneman);
         tgltanem=findViewById(R.id.txttanggalpilihan);
@@ -104,6 +105,7 @@ public class IsiMasaTanam extends AppCompatActivity {
             public void onClick(View v) {
                 //input
                 String mName = vnama.getText().toString().trim();
+                String mKelompok = kelompok.getSelectedItem().toString().trim();
                 String mJnstanem=jnstaneman.getSelectedItem().toString().trim();
                 String mJumlahteneman=vjumlahtanam.getText().toString().trim();
                 String mTgltenm=tgltanem.getText().toString().trim();
@@ -113,12 +115,15 @@ public class IsiMasaTanam extends AppCompatActivity {
                 String mPrdkpenjualan=prdkpenjualan.getText().toString().trim();
 
 
-                if (!mName.isEmpty() && !mJumlahteneman.isEmpty() && !mTgltenm.isEmpty() && !mJnstanem.equals("--Pilih--")) {
+                if (!mName.isEmpty() && !mKelompok.equals("--Pilih--") && !mJumlahteneman.isEmpty() && !mTgltenm.isEmpty() && !mJnstanem.equals("--Pilih--")) {
                     //Toast.makeText(IsiMasaTanam.this,"Berhasil",Toast.LENGTH_LONG).show();
                     masukprediksi();
 
-                } else if(mName.isEmpty()){
-                    Toast.makeText(IsiMasaTanam.this,"Nama Belum Di Isi",Toast.LENGTH_LONG).show();
+                } else if(mName.isEmpty()) {
+                    Toast.makeText(IsiMasaTanam.this, "Nama Belum Di Isi", Toast.LENGTH_LONG).show();
+
+                } else if (mKelompok.equals("--Pilih--")){
+                    Toast.makeText(IsiMasaTanam.this, "Kelompok Masyarakat Belum Di Pilih",Toast.LENGTH_LONG).show();
 
                 }else if (mJnstanem.equals("--Pilih--")){
                     Toast.makeText(IsiMasaTanam.this,"Jenis Tanaman Belum Di pilih",Toast.LENGTH_LONG).show();
@@ -373,6 +378,7 @@ public class IsiMasaTanam extends AppCompatActivity {
         //btn_regist.setVisibility(View.GONE);
 
         final String mName = this.vnama.getText().toString().trim();
+        final String mKelompok = this.kelompok.getSelectedItem().toString().trim();
         final String mJnstanem=this.jnstaneman.getSelectedItem().toString().trim();
         final String mJumlahteneman=this.vjumlahtanam.getText().toString().trim();
         final String mTgltenm=this.tgltanem.getText().toString().trim();
@@ -434,6 +440,7 @@ public class IsiMasaTanam extends AppCompatActivity {
                 String j =(String) b.get("idnya");
                 params.put("id",j);
                 params.put("namapenanam",mName);
+                params.put("kelompokmasyarakat",mKelompok);
                 params.put("jenistanaman",mJnstanem);
                 params.put("jumlahtanaman",mJumlahteneman);
                 params.put("tglsemai",mTgltenm);

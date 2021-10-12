@@ -46,9 +46,9 @@ import java.util.TimerTask;
 
 public class Nutrisi extends AppCompatActivity {
     ImageView back;
-    private static final String URL_BACANUTRISI = "http://192.168.0.3/hidroponik/bacanutrisi.php";
-    private static final String URL_KONTROL = "http://192.168.0.3/hidroponik/kontrol.php";
-    private static final String URL_BACAMESIN = "http://192.168.0.3/hidroponik/mesinnutrisi.php";
+    private static final String URL_BACANUTRISI = "http://192.168.191.183/hidroponik/bacanutrisi.php";
+    private static final String URL_KONTROL = "http://192.168.191.183/hidroponik/kontrol.php";
+    private static final String URL_BACAMESIN = "http://192.168.191.183/hidroponik/mesinnutrisi.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
@@ -211,7 +211,7 @@ public class Nutrisi extends AppCompatActivity {
         try {
             startActivityForResult(i, 100);
         } catch (ActivityNotFoundException a) {
-            Toast.makeText(Nutrisi.this, "Your device doesn't support Speech Recognition", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Nutrisi.this, "Perangkat Anda Tidak Mendukung Untuk Suara", Toast.LENGTH_SHORT).show();
         }
     }
     @Override

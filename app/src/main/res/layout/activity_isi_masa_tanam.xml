@@ -98,6 +98,27 @@
                         android:inputType="textEmailAddress" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+                    <TextView
+                        android:text="Kelompok Masyarakat *"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/gradientspiner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Spinner
+                            android:id="@+id/txtklmpk"
+                            android:layout_width="match_parent"
+                            android:spinnerMode="dialog"
+                            android:drawSelectorOnTop="true"
+                            android:entries="@array/PilihanKelompok"
+                            android:layout_height="50dp"/></LinearLayout>
+
 
                     <TextView
                         android:text="Jenis Tanaman *"
