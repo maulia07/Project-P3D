@@ -30,7 +30,7 @@ import java.util.TimerTask;
 
 public class Kelembapan extends AppCompatActivity {
     ImageView back;
-    private static final String URL_BACAKELEMBAPAN = "http://192.168.0.3/hidroponik/bacakelembapan.php";
+    private static final String URL_BACAKELEMBAPAN = "http://192.168.191.183/hidroponik/bacakelembapan.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
@@ -108,7 +108,7 @@ public class Kelembapan extends AppCompatActivity {
 
                                 float a= Float.parseFloat(strKelembapan);
 
-                                if (a<80){
+                                if (a<78){
                                     vstatus.setText("Normal");
                                 }else {
                                     vstatus.setText("Tidak Normal");

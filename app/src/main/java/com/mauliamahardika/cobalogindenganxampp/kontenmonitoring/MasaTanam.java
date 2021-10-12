@@ -50,7 +50,7 @@ import static com.android.volley.Request.Method.GET;
 public class MasaTanam extends AppCompatActivity {
 
     //url tanam
-    private static final String URL_PRODUK = "http://192.168.0.3/hidroponik/bacaprediksiasli.php";
+    private static final String URL_PRODUK = "http://192.168.191.183/hidroponik/bacaprediksiasli.php";
     List<Produk>produkList;
     ProdukAdapter adapter;
     RecyclerView recyclerView;
@@ -146,7 +146,8 @@ public class MasaTanam extends AppCompatActivity {
                                             produk.getString("tglsemai"),
                                             produk.getString("prediksiparalon"),
                                             produk.getString("prediksipanen"),
-                                            produk.getString("estimasipenjualan")));
+                                            produk.getString("estimasipenjualan"),
+                                            produk.getString("kelompokmasyarakat")));
 
 
                                     /*String strPrediksi = produk.getString("prediksiparalon").trim();

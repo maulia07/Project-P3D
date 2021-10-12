@@ -40,7 +40,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukViewHolder> {
-    private static final String URL_HAPUS = "http://192.168.0.3/hidroponik/hapusmasatanam.php";
+    private static final String URL_HAPUS = "http://192.168.191.183/hidroponik/hapusmasatanam.php";
     //Context mCtx;
     List<Produk>produkList;
 
@@ -88,6 +88,8 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukView
         holder.aPindahParalon.setText(produk.getPrediksiparalon());
         holder.aPanen.setText(produk.getPrediksipanen());
         holder.aEstimasiPenjualan.setText(produk.getEstimasipenjualan());
+        holder.aKelompokMasyarakat.setText(produk.getKelompokmasyarakat());
+
 
         //Jika Prediksi Paralon
         //tanggalan ambil dari xampp paralon
@@ -237,7 +239,7 @@ dialog.show();
     }
 
     public class ProdukViewHolder extends RecyclerView.ViewHolder {
-        TextView aNamapenanam,aJenistanaman,aJumlahtanaman,aTglSemai,aPindahParalon,aPanen,aEstimasiPenjualan;
+        TextView aNamapenanam,aJenistanaman,aJumlahtanaman,aTglSemai,aPindahParalon,aPanen,aEstimasiPenjualan,aKelompokMasyarakat;
         ImageView delet,imgpral,vpanen,vsemai;
 
         public ProdukViewHolder(@NonNull View itemView) {
@@ -253,6 +255,7 @@ dialog.show();
             imgpral=itemView.findViewById(R.id.checkPral);
             vpanen=itemView.findViewById(R.id.imgpanen);
             vsemai=itemView.findViewById(R.id.imgsemai);
+            aKelompokMasyarakat=itemView.findViewById(R.id.Tkelompok);
 
         }
     }

@@ -10,8 +10,9 @@ public class Produk {
     private String prediksiparalon;
     private String prediksipanen;
     private String estimasipenjualan;
+    private String kelompokmasyarakat;
 
-    public Produk(int seri,int id, String namapenanam, String jenistanaman,String jumlahtanaman, String tglsemai,String prediksiparalon,String prediksipanen, String estimasipenjualan) {
+    public Produk(int seri,int id, String namapenanam, String jenistanaman,String jumlahtanaman, String tglsemai,String prediksiparalon,String prediksipanen, String estimasipenjualan, String kelompokmasyarakat) {
         this.seri=seri;
         this.id=id;
         this.namapenanam=namapenanam;
@@ -21,6 +22,7 @@ public class Produk {
         this.prediksiparalon=prediksiparalon;
         this.prediksipanen=prediksipanen;
         this.estimasipenjualan=estimasipenjualan;
+        this.kelompokmasyarakat=kelompokmasyarakat;
 
         /*this.id = id;
         this.title = title;
@@ -58,6 +60,9 @@ public class Produk {
     }
     public String getEstimasipenjualan(){
         return estimasipenjualan;
+    }
+    public String getKelompokmasyarakat() {
+        return kelompokmasyarakat;
     }
    /* public int getId() {
         return id;
