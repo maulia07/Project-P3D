@@ -108,7 +108,7 @@ public class Kelembapan extends AppCompatActivity {
 
                                 float a= Float.parseFloat(strKelembapan);
 
-                                if (a<80){
+                                if (a<78){
                                     vstatus.setText("Normal");
                                 }else {
                                     vstatus.setText("Tidak Normal");

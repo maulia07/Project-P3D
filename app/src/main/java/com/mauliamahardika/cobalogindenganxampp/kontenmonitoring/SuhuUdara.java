@@ -129,7 +129,7 @@ public class SuhuUdara extends AppCompatActivity {
 
                                 float a= Float.parseFloat(strSuhuUdara);
 
-                                if (a<30){
+                                if (a<25){
                                     vstatus.setText("Normal");
                                 }else {
                                     vstatus.setText("Tidak Normal");
