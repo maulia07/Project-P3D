@@ -46,13 +46,15 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     //koneksi
-    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.android.volley:volley:1.2.1'
 
     //spiner
     implementation'com.github.devdhar04:MaterialSpinner:v0.1.2'
 
     //circular progress
         implementation 'com.github.brkckr:CircularProgressBar:1.0.1'
+
+    implementation 'com.google.android.gms:play-services-base:17.6.0'
 
 
 

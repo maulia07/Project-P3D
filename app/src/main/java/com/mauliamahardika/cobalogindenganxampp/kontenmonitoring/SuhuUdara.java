@@ -170,7 +170,6 @@ public class SuhuUdara extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         //  moveTaskToBack(true);
-
         Intent i=new Intent(SuhuUdara.this,IndexMenu.class);
         startActivity(i);
         finish();
