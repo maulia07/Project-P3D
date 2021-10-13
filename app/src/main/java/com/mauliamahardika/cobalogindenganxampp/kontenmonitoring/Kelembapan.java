@@ -30,7 +30,7 @@ import java.util.TimerTask;
 
 public class Kelembapan extends AppCompatActivity {
     ImageView back;
-    private static final String URL_BACAKELEMBAPAN = "http://192.168.191.183/hidroponik/bacakelembapan.php";
+    private static final String URL_BACAKELEMBAPAN = "http://himauntika.com/hidroponikp3d/bacakelembapan.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen

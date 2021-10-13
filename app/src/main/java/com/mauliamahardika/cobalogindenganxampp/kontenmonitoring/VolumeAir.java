@@ -30,7 +30,7 @@ import java.util.TimerTask;
 
 public class VolumeAir extends AppCompatActivity {
     ImageView back;
-    private static final String URL_BACAVOLUMEAIR = "http://192.168.191.183/hidroponik/bacavolumeair.php";
+    private static final String URL_BACAVOLUMEAIR = "http://himauntika.com/hidroponikp3d/bacavolumeair.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
