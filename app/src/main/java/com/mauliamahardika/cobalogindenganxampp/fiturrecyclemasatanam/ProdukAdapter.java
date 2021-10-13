@@ -40,7 +40,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ProdukViewHolder> {
-    private static final String URL_HAPUS = "http://192.168.191.183/hidroponik/hapusmasatanam.php";
+    private static final String URL_HAPUS = "http://himauntika.com/hidroponikp3d/hapusmasatanam.php";
     //Context mCtx;
     List<Produk>produkList;
 

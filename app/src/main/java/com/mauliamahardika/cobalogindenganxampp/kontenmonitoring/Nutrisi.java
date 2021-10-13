@@ -46,9 +46,9 @@ import java.util.TimerTask;
 
 public class Nutrisi extends AppCompatActivity {
     ImageView back;
-    private static final String URL_BACANUTRISI = "http://192.168.191.183/hidroponik/bacanutrisi.php";
-    private static final String URL_KONTROL = "http://192.168.191.183/hidroponik/kontrol.php";
-    private static final String URL_BACAMESIN = "http://192.168.191.183/hidroponik/mesinnutrisi.php";
+    private static final String URL_BACANUTRISI = "http://himauntika.com/hidroponikp3d/bacanutrisi.php";
+    private static final String URL_KONTROL = "http://himauntika.com/hidroponikp3d/kontrol.php";
+    private static final String URL_BACAMESIN = "http://himauntika.com/hidroponikp3d/mesinnutrisi.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen

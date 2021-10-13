@@ -29,7 +29,7 @@ public class registrasi extends AppCompatActivity {
     TextInputEditText name, password;
 
     private ProgressBar loading;
-    private static String URL_REGIST = "http://192.168.191.183/hidroponik/register.php";
+    private static String URL_REGIST = "http://himauntika.com/hidroponikp3d/register.php";
     private Button btndaftar,loginacc;
 
     @Override
