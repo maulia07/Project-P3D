@@ -63,7 +63,7 @@ public class IndexMenu extends AppCompatActivity {
     SessionManager sessionManager;
     String getId;
     // private static String URL_UPLOAD = "http://192.168.0.3/android_register_login/upload.php";
-    private static String URL_READ = "http://himauntika.com/hidroponikp3d/read_detail.php";
+    private static String URL_READ = "https://himauntika.com/hidroponikp3d/read_detail.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,10 +125,10 @@ public class IndexMenu extends AppCompatActivity {
         List<Fragment> fragments = new ArrayList<>();
 
         //link image
-        fragments.add(FragmentSlider.newInstance("http://himauntika.com/hidroponikp3d/gambarslide/satu.jpeg"));
-        fragments.add(FragmentSlider.newInstance("http://himauntika.com/hidroponikp3d/gambarslide/dua.jpeg"));
-        fragments.add(FragmentSlider.newInstance("http://himauntika.com/hidroponikp3d/gambarslide/tiga.jpeg"));
-        fragments.add(FragmentSlider.newInstance("http://himauntika.com/hidroponikp3d/gambarslide/empat.jpeg"));
+        fragments.add(FragmentSlider.newInstance("https://himauntika.com/hidroponikp3d/gambarslide/satu.jpeg"));
+        fragments.add(FragmentSlider.newInstance("https://himauntika.com/hidroponikp3d/gambarslide/dua.jpeg"));
+        fragments.add(FragmentSlider.newInstance("https://himauntika.com/hidroponikp3d/gambarslide/tiga.jpeg"));
+        fragments.add(FragmentSlider.newInstance("https://himauntika.com/hidroponikp3d/gambarslide/empat.jpeg"));
 
         mAdapter = new SliderPagerAdapter(getSupportFragmentManager(), fragments);
         bannerSlider.setAdapter(mAdapter);

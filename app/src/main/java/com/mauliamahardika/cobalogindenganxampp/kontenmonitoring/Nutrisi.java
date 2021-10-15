@@ -45,10 +45,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Nutrisi extends AppCompatActivity {
+    RequestQueue requestQueue;
     ImageView back;
-    private static final String URL_BACANUTRISI = "http://himauntika.com/hidroponikp3d/bacanutrisi.php";
-    private static final String URL_KONTROL = "http://himauntika.com/hidroponikp3d/kontrol.php";
-    private static final String URL_BACAMESIN = "http://himauntika.com/hidroponikp3d/mesinnutrisi.php";
+    private static final String URL_BACANUTRISI = "https://himauntika.com/hidroponikp3d/bacanutrisi.php";
+    private static final String URL_KONTROL = "https://himauntika.com/hidroponikp3d/kontrol.php";
+    private static final String URL_BACAMESIN = "https://himauntika.com/hidroponikp3d/mesinnutrisi.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
@@ -133,6 +134,7 @@ public class Nutrisi extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                uploaddua();
                 Intent i=new Intent(Nutrisi.this, IndexMenu.class);
                 startActivity(i);
                 finish();
@@ -165,7 +167,7 @@ public class Nutrisi extends AppCompatActivity {
 
                                     if (strName.equals("1")){
                                         keluaranmesin.setImageResource(R.drawable.ic_baseline_wb_sunny_24_hidupmesin);
-                                    }else if (strName.equals("2")){
+                                    }else if (strName.equals("0")){
                                         keluaranmesin.setImageResource(R.drawable.ic_baseline_wb_sunny_24_matimesin);
                                     }
                                 }
@@ -196,8 +198,12 @@ public class Nutrisi extends AppCompatActivity {
             }
         };
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        if (requestQueue == null) {
+            requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
+        } else {
+            requestQueue.add(stringRequest);
+        }
     }
 
     //komponen voice
@@ -288,7 +294,7 @@ public class Nutrisi extends AppCompatActivity {
     private void uploaddua() {
 
 
-        final String kontrolnutrisi = "2";
+        final String kontrolnutrisi = "0";
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Saving...");
@@ -305,7 +311,7 @@ public class Nutrisi extends AppCompatActivity {
                             String success = jsonObject.getString("success");
 
                             if (success.equals("1")){
-                                Toast.makeText(Nutrisi.this, "Berhasil Di Tambahkan!", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(Nutrisi.this, "Berhasil Di Tambahkan!", Toast.LENGTH_SHORT).show();
                                 //sessionManager.createSession(name, email, id);
                             }
 
@@ -446,14 +452,18 @@ public class Nutrisi extends AppCompatActivity {
 
 
         //adding our stringrequest to queue
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        if (requestQueue == null) {
+            requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
+        } else {
+            requestQueue.add(stringRequest);
+        }
     }
 
     @Override
     public void onBackPressed() {
         //  moveTaskToBack(true);
-
+uploaddua();
 
         Intent i=new Intent(Nutrisi.this,IndexMenu.class);
         startActivity(i);

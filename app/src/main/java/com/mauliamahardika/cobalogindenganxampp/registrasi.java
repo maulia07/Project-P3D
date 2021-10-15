@@ -2,6 +2,7 @@ package com.mauliamahardika.cobalogindenganxampp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +30,7 @@ public class registrasi extends AppCompatActivity {
     TextInputEditText name, password;
 
     private ProgressBar loading;
-    private static String URL_REGIST = "http://himauntika.com/hidroponikp3d/register.php";
+    private static String URL_REGIST = "https://himauntika.com/hidroponikp3d/register.php";
     private Button btndaftar,loginacc;
 
     @Override
@@ -65,6 +66,8 @@ public class registrasi extends AppCompatActivity {
     }
     //koneksi daftar
     private void Regist(){
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Loading...");
         //loading.setVisibility(View.VISIBLE);
         //btn_regist.setVisibility(View.GONE);
 
@@ -80,6 +83,7 @@ public class registrasi extends AppCompatActivity {
                             String success = jsonObject.getString("success");
 
                             if (success.equals("1")) {
+                                progressDialog.show();
                                 Toast.makeText(registrasi.this, "Registrasin Berhasil!", Toast.LENGTH_SHORT).show();
                             }
 

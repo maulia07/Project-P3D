@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     //private Button btn_login;
    // private TextView link_regist;
     //private ProgressBar loading;
-    private static String URL_LOGIN = "http://himauntika.com/hidroponikp3d/login.php";
+    private static String URL_LOGIN = "https://himauntika.com/hidroponikp3d/login.php";
     SessionManager sessionManager;
     MaterialButton login;
     Button daftaracc;

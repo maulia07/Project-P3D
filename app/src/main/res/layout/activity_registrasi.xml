@@ -4,15 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+
     tools:context=".registrasi">
 
 
-    <ProgressBar
-        android:id="@+id/pb2"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -56,10 +52,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="350dp">
-            </LinearLayout>
+                <ImageView
+                    android:src="@drawable/p3dlogo"
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+            </RelativeLayout>
 
             <LinearLayout
                 android:orientation="vertical"

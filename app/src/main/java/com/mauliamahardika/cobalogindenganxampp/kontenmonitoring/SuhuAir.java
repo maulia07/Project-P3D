@@ -29,8 +29,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class SuhuAir extends AppCompatActivity {
+    RequestQueue requestQueue;
     ImageView back;
-    private static final String URL_BACASUHUAIR = "http://himauntika.com/hidroponikp3d/bacasuhuair.php";
+    private static final String URL_BACASUHUAIR = "https://himauntika.com/hidroponikp3d/bacasuhuair.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
@@ -131,8 +132,12 @@ public class SuhuAir extends AppCompatActivity {
 
 
         //adding our stringrequest to queue
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        if (requestQueue == null) {
+            requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
+        } else {
+            requestQueue.add(stringRequest);
+        }
     }
 
     @Override
