@@ -29,8 +29,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class VolumeAir extends AppCompatActivity {
+    RequestQueue requestQueue;
     ImageView back;
-    private static final String URL_BACAVOLUMEAIR = "http://himauntika.com/hidroponikp3d/bacavolumeair.php";
+    private static final String URL_BACAVOLUMEAIR = "https://himauntika.com/hidroponikp3d/bacavolumeair.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
@@ -129,14 +130,19 @@ public class VolumeAir extends AppCompatActivity {
 
 
         //adding our stringrequest to queue
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        if (requestQueue == null) {
+            requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
+        } else {
+            requestQueue.add(stringRequest);
+        }
 
     }
 
 
     @Override
     public void onBackPressed() {
+
         //  moveTaskToBack(true);
 
         Intent i=new Intent(VolumeAir.this,IndexMenu.class);

@@ -50,7 +50,7 @@ import java.util.Map;
 public class IsiMasaTanam extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private static String URL_PREDIKSI = "http://himauntika.com/hidroponikp3d/masatanam.php";
+    private static String URL_PREDIKSI = "https://himauntika.com/hidroponikp3d/masatanam.php";
 
     private ProgressBar loading;
     EditText hasiledittext;

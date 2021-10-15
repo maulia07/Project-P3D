@@ -29,8 +29,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Kelembapan extends AppCompatActivity {
+    RequestQueue requestQueue;
     ImageView back;
-    private static final String URL_BACAKELEMBAPAN = "http://himauntika.com/hidroponikp3d/bacakelembapan.php";
+    private static final String URL_BACAKELEMBAPAN = "https://himauntika.com/hidroponikp3d/bacakelembapan.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
@@ -130,8 +131,12 @@ public class Kelembapan extends AppCompatActivity {
 
 
         //adding our stringrequest to queue
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        if (requestQueue == null) {
+            requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
+        } else {
+            requestQueue.add(stringRequest);
+        }
     }
 
     @Override

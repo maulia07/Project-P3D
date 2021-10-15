@@ -5,6 +5,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -43,8 +44,10 @@ import java.util.TimerTask;
 import java.util.concurrent.Delayed;
 
 public class SuhuUdara extends AppCompatActivity {
+    RequestQueue requestQueue;
+
     ImageView back;
-    private static final String URL_BACASUHUUDARA = "http://himauntika.com/hidroponikp3d/bacasuhuudara.php";
+    private static final String URL_BACASUHUUDARA = "https://himauntika.com/hidroponikp3d/bacasuhuudara.php";
     private static final String TAG = SuhuUdara.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
@@ -150,10 +153,12 @@ public class SuhuUdara extends AppCompatActivity {
                 });
 
 
+
+
         //adding our stringrequest to queue
         //RequestQueue requestQueue = Volley.newRequestQueue(this);
         //requestQueue.add(stringRequest);
-        RequestQueue requestQueue= Volley.newRequestQueue(this);
+       /* RequestQueue requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
 
         requestQueue.addRequestFinishedListener(new RequestQueue.RequestFinishedListener<Object>() {
@@ -161,9 +166,18 @@ public class SuhuUdara extends AppCompatActivity {
             public void onRequestFinished(Request<Object> request) {
                 requestQueue.getCache().clear();
             }
-        });
+        });*/
+        if (requestQueue == null) {
+            requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
+        } else {
+            requestQueue.add(stringRequest);
+        }
+
 
     }
+
+
 
 
     //bacpresed
