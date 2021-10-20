@@ -38,7 +38,7 @@ public class registrasi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi);
         btndaftar=findViewById(R.id.btndaftar);
-        loginacc=findViewById(R.id.loginakun);
+       // loginacc=findViewById(R.id.loginakun);
         name=findViewById(R.id.namadaftar);
         password=findViewById(R.id.passworddaftar);
 
@@ -52,14 +52,14 @@ public class registrasi extends AppCompatActivity {
             }
         });
 
-        loginacc.setOnClickListener(new View.OnClickListener() {
+       /* loginacc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i =new Intent(registrasi.this,MainActivity.class);
                 startActivity(i);
                 finish();
             }
-        });
+        });*/
 
 
 

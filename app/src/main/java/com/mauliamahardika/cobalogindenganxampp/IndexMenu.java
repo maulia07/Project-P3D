@@ -129,6 +129,8 @@ public class IndexMenu extends AppCompatActivity {
         fragments.add(FragmentSlider.newInstance("https://himauntika.com/hidroponikp3d/gambarslide/dua.jpeg"));
         fragments.add(FragmentSlider.newInstance("https://himauntika.com/hidroponikp3d/gambarslide/tiga.jpeg"));
         fragments.add(FragmentSlider.newInstance("https://himauntika.com/hidroponikp3d/gambarslide/empat.jpeg"));
+        fragments.add(FragmentSlider.newInstance("https://himauntika.com/hidroponikp3d/gambarslide/lima.jpeg"));
+        fragments.add(FragmentSlider.newInstance("https://himauntika.com/hidroponikp3d/gambarslide/enam.jpeg"));
 
         mAdapter = new SliderPagerAdapter(getSupportFragmentManager(), fragments);
         bannerSlider.setAdapter(mAdapter);
@@ -257,7 +259,7 @@ public class IndexMenu extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
 
                         progressDialog.dismiss();
-                        Toast.makeText(IndexMenu.this, "Eror " + error.toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(IndexMenu.this, "Eror " + error.toString(), Toast.LENGTH_SHORT).show();
 
 
                     }

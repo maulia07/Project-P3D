@@ -188,7 +188,7 @@
                 android:scaleType="fitXY"
                 android:layout_margin="90dp"
                 android:layout_below="@id/lytatas"
-                android:src="@drawable/logoheadkiri"
+                android:src="@drawable/logobawahbaru"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"/>
 

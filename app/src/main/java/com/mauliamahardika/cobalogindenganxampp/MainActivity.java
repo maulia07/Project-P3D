@@ -1,6 +1,7 @@
 package com.mauliamahardika.cobalogindenganxampp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -10,6 +11,8 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -41,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     MaterialButton login;
     Button daftaracc;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,9 +55,14 @@ public class MainActivity extends AppCompatActivity {
         name=findViewById(R.id.namalogin);
         password=findViewById(R.id.passwordlogin);
         login=findViewById(R.id.btnlogin);
-        daftaracc=findViewById(R.id.daftarakun);
+        //daftaracc=findViewById(R.id.daftarakun);
 
         //fungsi button
+        Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.white));
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,24 +71,33 @@ public class MainActivity extends AppCompatActivity {
                 String mName = name.getText().toString().trim();
                 String mPass = password.getText().toString().trim();
 
-                if (!mName.isEmpty() || !mPass.isEmpty()) {
+                if (!mName.isEmpty() && !mPass.isEmpty()) {
+
                     Login(mName, mPass);
 
-                } else {
+                }else if (mName.isEmpty()){
+                  //  Toast.makeText(MainActivity.this,"Tolong Masukan Nama Pengguna",Toast.LENGTH_LONG).show();
+                    name.setError("Tolong Masukan Nama Anda");
+
+                }else if (mPass.isEmpty()){
+                    //Toast.makeText(MainActivity.this,"Tolong Masukan Nama Anda",Toast.LENGTH_LONG).show();
+                    password.setError("Tolong Masukan Password Anda");
+
+                }else  {
                     name.setError("Tolong Masukan Nama");
                     password.setError("Tolong Masukan Password");
                 }
 
             }
         });
-        daftaracc.setOnClickListener(new View.OnClickListener() {
+       /* daftaracc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this,registrasi.class);
                 startActivity(i);
                 finish();
             }
-        });
+        });*/
 
 
 
@@ -89,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
     private void Login(final String name, final String password) {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
-
+        progressDialog.show();
        // loading.setVisibility(View.VISIBLE);
         //
         // btn_login.setVisibility(View.GONE);
@@ -106,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                             if (success.equals("1")) {
 
                                 for (int i = 0; i < jsonArray.length(); i++) {
-                                    progressDialog.show();
+                                    //progressDialog.show();
                                     JSONObject object = jsonArray.getJSONObject(i);
 
                                    String name = object.getString("name").trim();
@@ -130,14 +149,18 @@ public class MainActivity extends AppCompatActivity {
                                 }
 
                             }else {
-                                Toast.makeText(MainActivity.this,"Periksa password dan Nama Pengguna",Toast.LENGTH_LONG).show();
+                                progressDialog.dismiss();
+                                Toast.makeText(MainActivity.this,"Password Salah",Toast.LENGTH_LONG).show();
                             }
 
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            progressDialog.dismiss();
                          //   loading.setVisibility(View.GONE);
                             //  btn_login.setVisibility(View.VISIBLE);
-                            Toast.makeText(MainActivity.this, "Error " +e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"Nama Pengguna Salah",Toast.LENGTH_LONG).show();
+
+                            //Toast.makeText(MainActivity.this, "1 " +e.toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 },
@@ -147,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
                        // loading.setVisibility(View.GONE);
                         //btn_login.setVisibility(View.VISIBLE);
                         checkInternetConnection();
-                        Toast.makeText(MainActivity.this, "Error " +error.toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, "Error " +error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 })
         {
