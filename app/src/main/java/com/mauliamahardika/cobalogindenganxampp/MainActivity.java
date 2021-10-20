@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
     //koneksi login
     private void Login(final String name, final String password) {
         final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.setMessage("Loading...");
         progressDialog.show();
        // loading.setVisibility(View.VISIBLE);
@@ -170,6 +171,7 @@ public class MainActivity extends AppCompatActivity {
                        // loading.setVisibility(View.GONE);
                         //btn_login.setVisibility(View.VISIBLE);
                         checkInternetConnection();
+                        infointernet();
                         //Toast.makeText(MainActivity.this, "Error " +error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 })
@@ -212,4 +214,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void infointernet(){
+        AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Tidak Ada Koneksi");
+        builder.setMessage("Coba Periksa Status Koneksi Internet Anda !");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        AlertDialog dialog=builder.create();
+        dialog.show();
+        // builder.setOnCancelListener(true);
+        dialog.setCanceledOnTouchOutside(false);
+    }
 }
