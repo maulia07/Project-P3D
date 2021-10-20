@@ -117,14 +117,42 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_margin="5dp"
-                                android:layout_width="60dp"
-                                android:layout_gravity="center"
-                                android:layout_height="match_parent"
+                            <LinearLayout
+                                android:orientation="vertical"
                                 android:layout_weight="1"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/suhu_udara" />
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/suhu_udara"
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -143,14 +171,42 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_margin="5dp"
-                                android:layout_width="60dp"
-                                android:layout_gravity="center"
-                                android:layout_height="match_parent"
+                            <LinearLayout
+                                android:orientation="vertical"
                                 android:layout_weight="1"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/kelembapan" />
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/kelembapan"
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -169,14 +225,42 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_margin="5dp"
-                                android:layout_width="60dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
+                            <LinearLayout
+                                android:orientation="vertical"
                                 android:layout_weight="1"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/nutrisi" />
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/nutrisi"
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -195,14 +279,42 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_margin="5dp"
-                                android:layout_width="60dp"
-                                android:layout_gravity="center"
-                                android:layout_height="match_parent"
+                            <LinearLayout
+                                android:orientation="vertical"
                                 android:layout_weight="1"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/suhu_air" />
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/suhu_air"
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -230,14 +342,42 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_margin="5dp"
-                                android:layout_width="60dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
+                            <LinearLayout
+                                android:orientation="vertical"
                                 android:layout_weight="1"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/volume_air" />
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/volume_air"
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -256,14 +396,44 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_margin="5dp"
-                                android:layout_width="60dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
+                            <LinearLayout
+                                android:orientation="vertical"
                                 android:layout_weight="1"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/masatanam" />
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/masatanam" />
+
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -282,14 +452,42 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_margin="5dp"
-                                android:layout_width="75dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
+                            <LinearLayout
+                                android:orientation="vertical"
                                 android:layout_weight="1"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/tentang" />
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/tentang"
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -308,14 +506,42 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_margin="5dp"
-                                android:layout_width="60dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
+                            <LinearLayout
+                                android:orientation="vertical"
                                 android:layout_weight="1"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/keluar" />
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/keluar"
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                    <ImageView
+                                        android:layout_weight="3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_weight="3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </LinearLayout>
+                            </LinearLayout>
 
                             <TextView
 

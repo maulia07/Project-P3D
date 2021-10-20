@@ -178,7 +178,7 @@ public class Nutrisi extends AppCompatActivity {
                         catch (JSONException e) {
                             e.printStackTrace();
                            // progressDialog.dismiss();
-                            Toast.makeText(Nutrisi.this, "Error Reading Detail " + e.toString(), Toast.LENGTH_SHORT).show();
+                           // Toast.makeText(Nutrisi.this, "Error Reading Detail " + e.toString(), Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -187,7 +187,7 @@ public class Nutrisi extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
-                        Toast.makeText(Nutrisi.this, "Error Reading Detail " + error.toString(), Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(Nutrisi.this, "Error Reading Detail " + error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }) {
             @Override
@@ -298,19 +298,21 @@ public class Nutrisi extends AppCompatActivity {
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Saving...");
+        progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_KONTROL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        progressDialog.dismiss();
+
 
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             String success = jsonObject.getString("success");
 
                             if (success.equals("1")){
+                                progressDialog.dismiss();
                                 //Toast.makeText(Nutrisi.this, "Berhasil Di Tambahkan!", Toast.LENGTH_SHORT).show();
                                 //sessionManager.createSession(name, email, id);
                             }
@@ -318,7 +320,7 @@ public class Nutrisi extends AppCompatActivity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                             progressDialog.dismiss();
-                            Toast.makeText(Nutrisi.this, "Error "+ e.toString(), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(Nutrisi.this, "Error "+ e.toString(), Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -327,7 +329,7 @@ public class Nutrisi extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         progressDialog.dismiss();
-                        Toast.makeText(Nutrisi.this, "Error "+ error.toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(Nutrisi.this, "Error "+ error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 })
         {
@@ -339,8 +341,14 @@ public class Nutrisi extends AppCompatActivity {
             }
         };
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        /*RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);*/
+        if (requestQueue == null) {
+            requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
+        } else {
+            requestQueue.add(stringRequest);
+        }
         
     }
 

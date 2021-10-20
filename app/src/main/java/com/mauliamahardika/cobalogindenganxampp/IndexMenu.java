@@ -143,6 +143,7 @@ public class IndexMenu extends AppCompatActivity {
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
+        progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_READ,
@@ -250,6 +251,7 @@ public class IndexMenu extends AppCompatActivity {
                             e.printStackTrace();
                             progressDialog.dismiss();
                             //Toast.makeText(IndexMenu.this, "Error 1 " + e.toString(), Toast.LENGTH_SHORT).show();
+                            notifinternet();
                         }
 
                     }
@@ -260,7 +262,7 @@ public class IndexMenu extends AppCompatActivity {
 
                         progressDialog.dismiss();
                         //Toast.makeText(IndexMenu.this, "Eror " + error.toString(), Toast.LENGTH_SHORT).show();
-
+                        notifinternet();
 
                     }
                 }) {
@@ -312,5 +314,21 @@ public class IndexMenu extends AppCompatActivity {
 
             return false;
         }
+    }
+
+    private void notifinternet(){
+        AlertDialog.Builder builder=new AlertDialog.Builder(IndexMenu.this);
+        builder.setTitle("Tidak Ada Koneksi");
+        builder.setMessage("Coba Periksa Status Koneksi Internet Anda !");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        AlertDialog dialog=builder.create();
+        dialog.show();
+        // builder.setOnCancelListener(true);
+        dialog.setCanceledOnTouchOutside(false);
     }
 }
