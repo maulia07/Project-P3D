@@ -47,7 +47,7 @@ public class SuhuUdara extends AppCompatActivity {
     RequestQueue requestQueue;
 
     ImageView back;
-    private static final String URL_BACASUHUUDARA = "https://himauntika.com/hidroponikp3d/bacasuhuudara.php";
+    private static final String URL_BACASUHUUDARA = "https://p3d.himauntika.com/app/bacasuhuudara.php";
     private static final String TAG = SuhuUdara.class.getSimpleName(); //getting the info
 
     //deklarasi komponen

@@ -31,7 +31,7 @@ import java.util.TimerTask;
 public class SuhuAir extends AppCompatActivity {
     RequestQueue requestQueue;
     ImageView back;
-    private static final String URL_BACASUHUAIR = "https://himauntika.com/hidroponikp3d/bacasuhuair.php";
+    private static final String URL_BACASUHUAIR = "https://p3d.himauntika.com/app/bacasuhuair.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen

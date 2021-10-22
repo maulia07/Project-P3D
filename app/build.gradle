@@ -10,7 +10,7 @@ android {
         javaMaxHeapSize "4g"
     }
     defaultConfig {
-        applicationId 'com.ptigaduser.ftunis'
+        applicationId 'com.ptigadAdmin.ftunis'
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
