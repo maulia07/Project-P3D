@@ -31,7 +31,7 @@ import java.util.TimerTask;
 public class VolumeAir extends AppCompatActivity {
     RequestQueue requestQueue;
     ImageView back;
-    private static final String URL_BACAVOLUMEAIR = "https://himauntika.com/hidroponikp3d/bacavolumeair.php";
+    private static final String URL_BACAVOLUMEAIR = "https://p3d.himauntika.com/app/bacavolumeair.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
@@ -69,7 +69,7 @@ public class VolumeAir extends AppCompatActivity {
                 });
 
             }
-        };timer.scheduleAtFixedRate(tasknew,0,1000);
+        };timer.scheduleAtFixedRate(tasknew,0,100000);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

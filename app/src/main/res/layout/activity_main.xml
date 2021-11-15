@@ -11,7 +11,10 @@
 
 
 
-
+<ScrollView
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
@@ -19,9 +22,9 @@
             android:layout_height="match_parent">
 
             <RelativeLayout
-                android:layout_weight="1"
+
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="350dp">
                 <ImageView
                     android:src="@drawable/logobawahbaru"
                     android:layout_centerInParent="true"
@@ -30,11 +33,11 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:layout_weight="1"
+
                 android:orientation="vertical"
                 android:layout_margin="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
                 <TextView
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -140,7 +143,7 @@
             <RelativeLayout
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_weight="1"
+
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
                 android:layout_width="match_parent"
@@ -149,7 +152,6 @@
                     android:id="@+id/btnlogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
                     android:paddingTop="16dp"
                     android:layout_marginBottom="2dp"
                     android:paddingBottom="16dp"
@@ -158,7 +160,9 @@
                     android:textColor="#ffffff"
                     app:cornerRadius="24dp"/>
             </RelativeLayout>
+
+
         </LinearLayout>
 
-
+</ScrollView>
 </RelativeLayout>

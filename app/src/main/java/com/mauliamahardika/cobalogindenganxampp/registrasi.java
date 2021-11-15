@@ -30,7 +30,7 @@ public class registrasi extends AppCompatActivity {
     TextInputEditText name, password;
 
     private ProgressBar loading;
-    private static String URL_REGIST = "https://himauntika.com/hidroponikp3d/register.php";
+    private static String URL_REGIST = "https://p3d.himauntika.com/app/register.php";
     private Button btndaftar,loginacc;
 
     @Override
@@ -38,7 +38,7 @@ public class registrasi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi);
         btndaftar=findViewById(R.id.btndaftar);
-       // loginacc=findViewById(R.id.loginakun);
+       loginacc=findViewById(R.id.loginakun);
         name=findViewById(R.id.namadaftar);
         password=findViewById(R.id.passworddaftar);
 
@@ -52,14 +52,14 @@ public class registrasi extends AppCompatActivity {
             }
         });
 
-       /* loginacc.setOnClickListener(new View.OnClickListener() {
+        loginacc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i =new Intent(registrasi.this,MainActivity.class);
                 startActivity(i);
                 finish();
             }
-        });*/
+        });
 
 
 
@@ -70,7 +70,7 @@ public class registrasi extends AppCompatActivity {
         progressDialog.setMessage("Loading...");
         //loading.setVisibility(View.VISIBLE);
         //btn_regist.setVisibility(View.GONE);
-
+        progressDialog.show();
         final String name = this.name.getText().toString().trim();
         //final String email = this.email.getText().toString().trim();
         final String password = this.password.getText().toString().trim();
@@ -83,15 +83,19 @@ public class registrasi extends AppCompatActivity {
                             String success = jsonObject.getString("success");
 
                             if (success.equals("1")) {
-                                progressDialog.show();
+
                                 Toast.makeText(registrasi.this, "Registrasin Berhasil!", Toast.LENGTH_SHORT).show();
+                            Intent i=new Intent(registrasi.this,MainActivity.class);
+                            startActivity(i);
+                            finish();
                             }
 
 
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            progressDialog.dismiss();
                             Toast.makeText(registrasi.this, "Register Error! " + e.toString(), Toast.LENGTH_SHORT).show();
-                            loading.setVisibility(View.GONE);
+                            //loading.setVisibility(View.GONE);
                             //btn_regist.setVisibility(View.VISIBLE);
                         }
                     }
@@ -99,8 +103,9 @@ public class registrasi extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        progressDialog.dismiss();
                         Toast.makeText(registrasi.this, "Register Error! " + error.toString(), Toast.LENGTH_SHORT).show();
-                        loading.setVisibility(View.GONE);
+                        //loading.setVisibility(View.GONE);
                         //btn_regist.setVisibility(View.VISIBLE);
                     }
                 })

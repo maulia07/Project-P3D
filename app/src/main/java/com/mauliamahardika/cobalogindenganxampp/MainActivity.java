@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
     //private Button btn_login;
    // private TextView link_regist;
     //private ProgressBar loading;
-    private static String URL_LOGIN = "https://himauntika.com/hidroponikp3d/login.php";
+    private static String URL_LOGIN = "https://p3d.himauntika.com/app/login.php";
     SessionManager sessionManager;
     MaterialButton login;
-    Button daftaracc;
+    MaterialButton daftaracc;
 
 
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         name=findViewById(R.id.namalogin);
         password=findViewById(R.id.passwordlogin);
         login=findViewById(R.id.btnlogin);
-        //daftaracc=findViewById(R.id.daftarakun);
+      //  daftaracc=findViewById(R.id.daftarakun);
 
         //fungsi button
         Window window = this.getWindow();
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-       /* daftaracc.setOnClickListener(new View.OnClickListener() {
+      /* daftaracc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this,registrasi.class);
@@ -221,7 +221,8 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                finish();
+                dialog.dismiss();
+                builder.setCancelable(true);
             }
         });
         AlertDialog dialog=builder.create();

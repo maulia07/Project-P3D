@@ -47,9 +47,9 @@ import java.util.TimerTask;
 public class Nutrisi extends AppCompatActivity {
     RequestQueue requestQueue;
     ImageView back;
-    private static final String URL_BACANUTRISI = "https://himauntika.com/hidroponikp3d/bacanutrisi.php";
-    private static final String URL_KONTROL = "https://himauntika.com/hidroponikp3d/kontrol.php";
-    private static final String URL_BACAMESIN = "https://himauntika.com/hidroponikp3d/mesinnutrisi.php";
+    private static final String URL_BACANUTRISI = "https://p3d.himauntika.com/app/bacanutrisi.php";
+    private static final String URL_KONTROL = "https://p3d.himauntika.com/app/kontrol.php";
+    private static final String URL_BACAMESIN = "https://p3d.himauntika.com/app/mesinnutrisi.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
@@ -129,7 +129,7 @@ public class Nutrisi extends AppCompatActivity {
                 });
 
             }
-        };timer.scheduleAtFixedRate(tasknew,0,1000);
+        };timer.scheduleAtFixedRate(tasknew,0,100000);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

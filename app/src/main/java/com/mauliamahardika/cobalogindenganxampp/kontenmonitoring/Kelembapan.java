@@ -31,7 +31,7 @@ import java.util.TimerTask;
 public class Kelembapan extends AppCompatActivity {
     RequestQueue requestQueue;
     ImageView back;
-    private static final String URL_BACAKELEMBAPAN = "https://himauntika.com/hidroponikp3d/bacakelembapan.php";
+    private static final String URL_BACAKELEMBAPAN = "https://p3d.himauntika.com/app/bacakelembapan.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
@@ -68,7 +68,7 @@ public class Kelembapan extends AppCompatActivity {
                 });
 
             }
-        };timer.scheduleAtFixedRate(tasknew,0,1000);
+        };timer.scheduleAtFixedRate(tasknew,0,100000);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
