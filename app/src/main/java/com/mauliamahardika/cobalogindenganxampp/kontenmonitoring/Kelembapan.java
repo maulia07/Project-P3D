@@ -68,7 +68,7 @@ public class Kelembapan extends AppCompatActivity {
                 });
 
             }
-        };timer.scheduleAtFixedRate(tasknew,0,1000);
+        };timer.scheduleAtFixedRate(tasknew,0,100000);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
