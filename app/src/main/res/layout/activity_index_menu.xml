@@ -579,6 +579,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
         <ImageView
+            android:scaleType="fitXY"
             android:src="@drawable/logobawahbaru"
             android:layout_weight="1"
             android:layout_width="match_parent"
