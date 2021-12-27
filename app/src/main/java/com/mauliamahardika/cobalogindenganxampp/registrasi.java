@@ -30,7 +30,7 @@ public class registrasi extends AppCompatActivity {
     TextInputEditText name, password;
 
     private ProgressBar loading;
-    private static String URL_REGIST = "https://p3d.himauntika.com/app/register.php";
+    private static String URL_REGIST = "https://himauntika.com/app/register.php";
     private Button btndaftar,loginacc;
 
     @Override

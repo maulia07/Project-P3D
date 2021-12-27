@@ -31,7 +31,7 @@ import java.util.TimerTask;
 public class VolumeAir extends AppCompatActivity {
     RequestQueue requestQueue;
     ImageView back;
-    private static final String URL_BACAVOLUMEAIR = "https://p3d.himauntika.com/app/bacavolumeair.php";
+    private static final String URL_BACAVOLUMEAIR = "https://himauntika.com/app/bacavolumeair.php";
     private static final String TAG = MasaTanam.class.getSimpleName(); //getting the info
 
     //deklarasi komponen
