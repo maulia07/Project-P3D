@@ -9,8 +9,8 @@
    <ImageView
        android:id="@+id/logo"
        android:layout_centerInParent="true"
-       android:src="@drawable/p3dlogo"
-       android:layout_width="100dp"
+       android:src="@drawable/logobawahbaru"
+       android:layout_width="150dp"
        android:layout_height="100dp"/>
 
     <RelativeLayout

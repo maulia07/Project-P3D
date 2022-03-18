@@ -50,7 +50,7 @@ import static com.android.volley.Request.Method.GET;
 public class MasaTanam extends AppCompatActivity {
 
     //url tanam
-    private static final String URL_PRODUK = "https://p3d.himauntika.com/app/bacaprediksiasli.php";
+    private static final String URL_PRODUK = "https://himauntika.com/app/bacaprediksiasli.php";
     List<Produk>produkList;
     ProdukAdapter adapter;
     RecyclerView recyclerView;
